@@ -12,6 +12,40 @@
     Welcome to my Django project.
     My age is {{age}}.
     <!-- {{age}} this data is comming from views function home, under the data dictionary and age as key. Value is 25-->
+
+    <br> </br>Available Courses are:
+
+    <!-- In views there is a dictionary in home function, dictionary has a list. -->
+    <!-- to get data one by one we'll use for loop. to use for loop we'll use % inside curly braces -->
+
+    {% for i in clist %}
+    <div>{{i}}</div>
+    <!-- to end for loop -->
+    {% endfor %}
+
+    <!-- Django Template For loop  -->
+    <!-- forloop.counter = The current iteration of the loop from 1 -->
+    <br></br> My friends:
+    {% for i in friends %}
+    <div>{{forloop.counter}} {{i}}</div>
+    {% endfor %}
+
+    <!-- if dictionary is in the nested level then how to use for loop-->
+    <br />
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+        </tr>
+        {% for d in student_details %}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
 </body>
 
 </html>

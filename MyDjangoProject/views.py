@@ -16,7 +16,12 @@ def home(request):
     data = {
         'title': 'Home Page',
         'age': 25,
-
+        'clist': ['php', 'java', 'Python', 'SQL'],
+        'friends': ['Silver', 'Ashish', 'Prashant', 'Priyanshi', 'Aman', 'Ananya'],
+        'student_details': [
+            {'name': 'Ayush', 'phone': 9348752924},
+            {'name': 'Silver', 'phone': 9945679823}
+        ]
     }
     # html template which will render on home page.
     return render(request, 'index.html', data)
