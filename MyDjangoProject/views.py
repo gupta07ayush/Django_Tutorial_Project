@@ -3,15 +3,18 @@
 # render is used to render(display) html page(template) on browser as a response.
 # request is used when you want to get data from a form.
 # Make functions for every task then map to urls.py
+# render takes two arguments, first is request and second .html templates which has to render
 
 from django.http import HttpResponse
-
-
-def gupta(request):
-    return HttpResponse("<h1><center>Welcome to the world of the Guptaji.</center></h1>")
+from django.shortcuts import render
 
 
 def home(request):
+    # html template which will render on home page.
+    return render(request, 'index.html')
+
+
+def gupta(request):
     return HttpResponse("<h1><center>My name is Ayush Gupta<center></h1>")
 
 
