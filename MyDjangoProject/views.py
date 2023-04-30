@@ -16,6 +16,7 @@ def home(request):
     data = {
         'title': 'Home Page',
         'age': 25,
+        'numbers': [2, 4, 6, 7, 9],
         'clist': ['php', 'java', 'Python', 'SQL'],
         'friends': ['Silver', 'Ashish', 'Prashant', 'Priyanshi', 'Aman', 'Ananya'],
         'student_details': [
