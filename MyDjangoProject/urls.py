@@ -21,6 +21,7 @@ from MyDjangoProject import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
+    path('practice/', views.practice),
     path('gupta/', views.gupta),
 
     # add dynamic urls to urlpatterns. 3 types of dynamic urls- int(gupta/1), str(gupta/mypage), slug(gupta/my-page)

@@ -11,7 +11,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-def home(request):
+def practice(request):
     # use key of data in the index.html page to send the value 'Home page' in {{title}}
     data = {
         'title': 'Home Page',
@@ -29,6 +29,10 @@ def home(request):
 
 
 def gupta(request):
+    return HttpResponse("<h1><center>My name is Ayush Gupta<center></h1>")
+
+
+def home(request):
     return HttpResponse("<h1><center>My name is Ayush Gupta<center></h1>")
 
 
