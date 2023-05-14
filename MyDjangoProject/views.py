@@ -33,9 +33,12 @@ def gupta(request):
 
 
 def home(request):
+
     return HttpResponse("<h1><center>My name is Ayush Gupta<center></h1>")
 
 
 # make function to dynamic urls to fetch and show multiple urls(blog posts). we can fetch data with the help of id from the database using where clause.
+
+
 def dynamic(request, courseid):
     return HttpResponse(courseid)
